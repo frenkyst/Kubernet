@@ -91,8 +91,11 @@
 
   ![image](https://user-images.githubusercontent.com/40049149/191907592-3fa1450c-a5e2-4441-b417-95a891fc65fc.png)
 
+- Lalu lakukan join cluster dengan perintah berikut
 
+      kubeadm token create --print-join-command
 
+  ![image](https://user-images.githubusercontent.com/40049149/191907771-1db4a24b-8f28-4660-a353-00174388cd4d.png)
 
 
 
