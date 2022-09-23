@@ -97,13 +97,52 @@
 
   ![image](https://user-images.githubusercontent.com/40049149/191907771-1db4a24b-8f28-4660-a353-00174388cd4d.png)
 
+Kemudian copy semua hasil outputnya
+
+NOTE : INSTALL DAHULU KUBERNATES DENGAN VERSI YANG SAMA !!!
+
+Copy pada kedua worker
+
+![image](https://user-images.githubusercontent.com/40049149/191915924-44551d7b-a6b8-4e50-af0f-60f13cb3306f.png)
 
 
+[WORKER 1]
 
+[WORKER 2]
 
+Kemudian cek koneksi nodes menggunakan perintah
 
+    kubectl get nodes
 
+![image](https://user-images.githubusercontent.com/40049149/191915964-cfcdfd01-be35-498a-a6a6-d7c17b2c5f4c.png)
 
+## Deploy Simple App
+
+- Kemudian saya akan mendeploy nginx
+
+      kubectl create deploy nginx --image nginx
+
+  ![image](https://user-images.githubusercontent.com/40049149/191916419-a3daab60-4391-450a-83c7-8fa070653fa4.png)
+
+- Buildnya gunakan perintah
+
+      kubectl expose deploy nginx --port 80 --type NodePort
+      
+  ![image](https://user-images.githubusercontent.com/40049149/191916473-bf452833-4f01-441d-9e6f-cc6a03c46a96.png)
+
+- Cek service gunakan perintah
+
+      kubectl get svc
+      
+  ![image](https://user-images.githubusercontent.com/40049149/191916552-485eca55-00a3-4889-be4e-e1ab6643b92f.png)
+      
+- Untuk melihat informasi lengkap pada pod gunakan
+
+      kubectl describe pod nama pod
+
+  ![image](https://user-images.githubusercontent.com/40049149/191916783-eff5b539-7f61-45c9-ad96-7c896f2b0a1f.png)
+
+- Nginx berjalan pada worker 2 
 
 
 
