@@ -71,12 +71,39 @@
 
       sudo sudo kubeadm init
 
-  ![image](https://user-images.githubusercontent.com/40049149/191902387-16f3e2db-6fc3-408c-bbdd-60c41342ccaa.png)
+  ![Screenshot from 2022-09-23 13-49-26](https://user-images.githubusercontent.com/40049149/191906234-a84ffc85-2bfe-4f62-afaf-f60acde7fa04.png)
 
 - Konfigurasi kubernetes agar dapat menjalankan perintah
 
-mkdir -p .kube
-sudo cp -i /etc/kubernetes/admin.conf .kube/config
-sudo chown $(id -u):$(id -g) .kube/config
+      mkdir -p $HOME/.kube
+      sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+      sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+  ![image](https://user-images.githubusercontent.com/40049149/191907048-e770dd30-10cb-4bb8-8549-4b47e94fa77e.png)
+
+      kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+
+  ![image](https://user-images.githubusercontent.com/40049149/191907502-bc3bd45e-8b37-44bb-a44b-c3ccdb08148d.png)
+
+- Mengecek semua pods gunakan perintah
+
+      kubectl get pods --all-namespaces
+
+  ![image](https://user-images.githubusercontent.com/40049149/191907592-3fa1450c-a5e2-4441-b417-95a891fc65fc.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
