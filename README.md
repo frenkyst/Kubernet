@@ -56,24 +56,27 @@
       EOF
       sudo apt-get update
 
-  ![image](https://user-images.githubusercontent.com/40049149/191899759-a143c53c-ba67-4342-b9c1-391bddcc986c.png)
+  ![image](https://user-images.githubusercontent.com/40049149/191902202-fec46f5f-5d4e-44d1-9cf5-644a6cfb9ebb.png)
 
       sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 
-  ![image](https://user-images.githubusercontent.com/40049149/191899894-2e081ccc-5cad-4430-9bf1-85ce0ef6c09a.png)
+  ![image](https://user-images.githubusercontent.com/40049149/191902265-73a2056d-ec38-4cc5-891c-ea619827dff4.png)
 
       sudo systemctl daemon-reload
       sudo systemctl restart kubelet
 
-  ![image](https://user-images.githubusercontent.com/40049149/191899931-890957a3-4739-42bd-ba81-b57df866c15b.png)
+  ![image](https://user-images.githubusercontent.com/40049149/191902323-f3494584-ee4e-46b8-8220-ae1e97d6c5c5.png)
 
 - Konfigurasi kubeadm
 
-      kubeadm init
+      sudo sudo kubeadm init
 
+  ![image](https://user-images.githubusercontent.com/40049149/191902387-16f3e2db-6fc3-408c-bbdd-60c41342ccaa.png)
 
+- Konfigurasi kubernetes agar dapat menjalankan perintah
 
-
-
+mkdir -p .kube
+sudo cp -i /etc/kubernetes/admin.conf .kube/config
+sudo chown $(id -u):$(id -g) .kube/config
 
 
